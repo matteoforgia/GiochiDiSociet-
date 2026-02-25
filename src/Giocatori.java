@@ -1,21 +1,24 @@
+import java.util.UUID;
+
 public class Giocatori {
         private String nome;
         private int partiteVinte;
     
-        public Giocatori(String nome, int punteggio) {
-            this.nome = nome;
-            this.partiteVinte = punteggio;
+        public Giocatori() {
+            this.nome = UUID.randomUUID().toString().substring(0, 5);
+            this.partiteVinte = 0;
         }
 
         public String getNome() {
             return nome;
         }
 
-        public int getPunteggio() {
+        public int getPartiteVinte() {
             return partiteVinte;
         }
 
-        public void setPunteggio(int punteggio) {
-            this.partiteVinte = punteggio;
+        public void setPartiteVinte(int partiteVinte) {
+            this.partiteVinte = partiteVinte;
         }
+        
 }
